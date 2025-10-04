@@ -1,0 +1,23 @@
+format: jb-book
+root: intro
+
+chapters:
+  - file: labs/README.md
+    title: Laboratory
+    sections:
+      - file: labs/DL-Lab1.ipynb
+      - file: labs/DL-Lab2.ipynb
+      - file: labs/DL-Lab3.ipynb
+      - file: labs/DL-Lab4.ipynb
+      - file: labs/DL-Lab5.ipynb
+      - file: labs/DL-Lab6.ipynb
+
+  - file: lectures/README.md
+    title: Lecture Tasks
+    sections:
+      - file: lectures/LectureTask1.ipynb
+
+  - file: projects/README.md
+    title: Projects
+    sections:
+      - glob: projects/project*.ipynb
