@@ -1,0 +1,9 @@
+/* Change main page background color */
+body {
+    background-color: #f2f0e6 !important;
+}
+
+/* Optional: also change main content panel if needed */
+.bd-content {
+    background-color: #f2f0e6 !important;
+}
