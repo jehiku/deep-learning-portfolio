@@ -58,6 +58,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'labs/DL-Lab4';</script>
+    <link rel="canonical" href="/deep-learning-portfolio/labs/DL-Lab4.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Laboratory Task 5" href="DL-Lab5.html" />
@@ -183,10 +184,12 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">Laboratory</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="DL-Lab1.html"><strong>Laboratory Task 1</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="DL-Lab2.html"><strong>Laboratory Task 2</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="DL-Lab201.html"><strong>Laboratory Task 201</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="DL-Lab3.html"><strong>Laboratory Task 3</strong></a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Laboratory Task 4</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="DL-Lab5.html"><strong>Laboratory Task 5</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="DL-Lab6.html"><strong>Laboratory Task 6</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Homework201.html"><strong>When Learning Rates Decay: What Really Happens Inside a CNN</strong></a></li>
 </ul><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../lectures/README.html">Lecture Tasks</a><ul>
@@ -250,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/jehiku/deep-learning-portfolio" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -267,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flabs/DL-Lab4.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/jehiku/deep-learning-portfolio/issues/new?title=Issue%20on%20page%20%2Flabs/DL-Lab4.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -553,83 +556,16 @@ This task will involve the implementation of linear regression using PyTorch on 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">losses</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
-<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="k">for</span> <span class="n">xb</span><span class="p">,</span> <span class="n">yb</span> <span class="ow">in</span> <span class="n">train_dl</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="c1"># Forward pass</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">xb</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">yb</span><span class="p">)</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\dataloader.py:701,</span> in <span class="ni">_BaseDataLoaderIter.__next__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">698</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sampler_iter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">699</span>     <span class="c1"># TODO(https://github.com/pytorch/pytorch/issues/76750)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_reset</span><span class="p">()</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="ne">--&gt; </span><span class="mi">701</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_data</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_yielded</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="g g-Whitespace">    </span><span class="mi">703</span> <span class="k">if</span> <span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_dataset_kind</span> <span class="o">==</span> <span class="n">_DatasetKind</span><span class="o">.</span><span class="n">Iterable</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_IterableDataset_len_called</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_yielded</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_IterableDataset_len_called</span>
-<span class="g g-Whitespace">    </span><span class="mi">707</span> <span class="p">):</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\dataloader.py:757,</span> in <span class="ni">_SingleProcessDataLoaderIter._next_data</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">755</span> <span class="k">def</span><span class="w"> </span><span class="nf">_next_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">756</span>     <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_next_index</span><span class="p">()</span>  <span class="c1"># may raise StopIteration</span>
-<span class="ne">--&gt; </span><span class="mi">757</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dataset_fetcher</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>  <span class="c1"># may raise StopIteration</span>
-<span class="g g-Whitespace">    </span><span class="mi">758</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">759</span>         <span class="n">data</span> <span class="o">=</span> <span class="n">_utils</span><span class="o">.</span><span class="n">pin_memory</span><span class="o">.</span><span class="n">pin_memory</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pin_memory_device</span><span class="p">)</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\_utils\fetch.py:55,</span> in <span class="ni">_MapDatasetFetcher.fetch</span><span class="nt">(self, possibly_batched_index)</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset</span><span class="p">[</span><span class="n">possibly_batched_index</span><span class="p">]</span>
-<span class="ne">---&gt; </span><span class="mi">55</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">collate_fn</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\_utils\collate.py:398,</span> in <span class="ni">default_collate</span><span class="nt">(batch)</span>
-<span class="g g-Whitespace">    </span><span class="mi">337</span> <span class="k">def</span><span class="w"> </span><span class="nf">default_collate</span><span class="p">(</span><span class="n">batch</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">338</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">339</span><span class="sd">     Take in a batch of data and put the elements within the batch into a tensor with an additional outer dimension - batch size.</span>
-<span class="g g-Whitespace">    </span><span class="mi">340</span><span class="sd"> </span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">396</span><span class="sd">         &gt;&gt;&gt; default_collate(batch)  # Handle `CustomType` automatically</span>
-<span class="g g-Whitespace">    </span><span class="mi">397</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">398</span>     <span class="k">return</span> <span class="n">collate</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">collate_fn_map</span><span class="o">=</span><span class="n">default_collate_fn_map</span><span class="p">)</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\_utils\collate.py:211,</span> in <span class="ni">collate</span><span class="nt">(batch, collate_fn_map)</span>
-<span class="g g-Whitespace">    </span><span class="mi">208</span> <span class="n">transposed</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">batch</span><span class="p">))</span>  <span class="c1"># It may be accessed twice, so we use a list.</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">211</span>     <span class="k">return</span> <span class="p">[</span>
-<span class="g g-Whitespace">    </span><span class="mi">212</span>         <span class="n">collate</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">collate_fn_map</span><span class="o">=</span><span class="n">collate_fn_map</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">213</span>         <span class="k">for</span> <span class="n">samples</span> <span class="ow">in</span> <span class="n">transposed</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>     <span class="p">]</span>  <span class="c1"># Backwards compatibility.</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span>     <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\_utils\collate.py:212,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">208</span> <span class="n">transposed</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">batch</span><span class="p">))</span>  <span class="c1"># It may be accessed twice, so we use a list.</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span>     <span class="k">return</span> <span class="p">[</span>
-<span class="ne">--&gt; </span><span class="mi">212</span>         <span class="n">collate</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">collate_fn_map</span><span class="o">=</span><span class="n">collate_fn_map</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">213</span>         <span class="k">for</span> <span class="n">samples</span> <span class="ow">in</span> <span class="n">transposed</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>     <span class="p">]</span>  <span class="c1"># Backwards compatibility.</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">216</span>     <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\_utils\collate.py:155,</span> in <span class="ni">collate</span><span class="nt">(batch, collate_fn_map)</span>
-<span class="g g-Whitespace">    </span><span class="mi">153</span> <span class="k">if</span> <span class="n">collate_fn_map</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span>     <span class="k">if</span> <span class="n">elem_type</span> <span class="ow">in</span> <span class="n">collate_fn_map</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">155</span>         <span class="k">return</span> <span class="n">collate_fn_map</span><span class="p">[</span><span class="n">elem_type</span><span class="p">](</span><span class="n">batch</span><span class="p">,</span> <span class="n">collate_fn_map</span><span class="o">=</span><span class="n">collate_fn_map</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="k">for</span> <span class="n">collate_type</span> <span class="ow">in</span> <span class="n">collate_fn_map</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">158</span>         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="n">collate_type</span><span class="p">):</span>
-
-<span class="nn">File ~\anaconda3\envs\deeplearning_env\lib\site-packages\torch\utils\data\_utils\collate.py:272,</span> in <span class="ni">collate_tensor_fn</span><span class="nt">(batch, collate_fn_map)</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span>     <span class="n">storage</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">_typed_storage</span><span class="p">()</span><span class="o">.</span><span class="n">_new_shared</span><span class="p">(</span><span class="n">numel</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">elem</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>     <span class="n">out</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">storage</span><span class="p">)</span><span class="o">.</span><span class="n">resize_</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">batch</span><span class="p">),</span> <span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="n">elem</span><span class="o">.</span><span class="n">size</span><span class="p">()))</span>
-<span class="ne">--&gt; </span><span class="mi">272</span> <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch [100/1000], Loss: 0.7916
+Epoch [200/1000], Loss: 0.3436
+Epoch [300/1000], Loss: 0.1614
+Epoch [400/1000], Loss: 0.0788
+Epoch [500/1000], Loss: 0.3550
+Epoch [600/1000], Loss: 0.9199
+Epoch [700/1000], Loss: 0.4320
+Epoch [800/1000], Loss: 0.1044
+Epoch [900/1000], Loss: 0.1199
+Epoch [1000/1000], Loss: 0.0845
 </pre></div>
 </div>
 </div>
