@@ -24,3 +24,6 @@ chapters:
     title: Projects
     sections:
       - glob: projects/project*.ipynb
+  
+  - title: Standalone Notebooks
+    url: standalone-html/index.html
