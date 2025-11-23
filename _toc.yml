@@ -27,3 +27,9 @@ chapters:
   
   - file: standalone-html/README.md
     title: Standalone Notebooks
+    sections:
+      - file: labs/DL-Lab1.ipynb
+      - file: standalone-html/DL-Lab201.html
+      - file: standalone-html/Homework201.html
+
+  
