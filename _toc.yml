@@ -25,5 +25,5 @@ chapters:
     sections:
       - glob: projects/project*.ipynb
   
-  - title: Standalone Notebooks
-    url: standalone-html/index.html
+  - file: standalone-html/README.md
+    title: Standalone Notebooks
