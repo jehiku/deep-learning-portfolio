@@ -12,7 +12,7 @@ chapters:
       - file: labs/DL-Lab4.ipynb
       - file: labs/DL-Lab5.ipynb
       - file: labs/DL-Lab6.ipynb
-      - file: Homework201.ipynb
+      - file: labs/Homework201.ipynb
   
   - file: lectures/README.md
     title: Lecture Tasks
