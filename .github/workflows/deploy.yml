@@ -31,6 +31,10 @@ jobs:
       run: |
         jupyter-book build .
 
+    - name: Copy standalone HTML files
+      run: |
+        cp -r standalone-html _build/html/ || echo "No standalone-html folder found"
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
