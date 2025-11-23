@@ -124,4 +124,12 @@ Currently focused on refining practical skills to transition confidently into a 
 
 ---
 
+## Additional Resources
+
+**Standalone Notebooks:**
+- [DL-Lab201](standalone-html/DL-Lab201.html) - Deep Learning Lab 201
+- [Homework201](standalone-html/Homework201.html) - Homework 201
+
+---
+
 *Last updated: 2025*
